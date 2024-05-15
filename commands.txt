@@ -5,9 +5,9 @@ wildcard:
 ./erase_file *.txt
 
 task2
-gcc -o concurrent_access_lockfile (task2.1)concurrent_access_lockfile.c
+gcc -o concurrent_access_lockfile (task2.a)concurrent_access_lockfile.c
 ./concurrent_access_lockfile A &
 ./concurrent_access_lockfile B &
-gcc -o concurrent_access_fcntl (task2.2)concurrent_access_fcntl.c
+gcc -o concurrent_access_fcntl (task2.b)concurrent_access_fcntl.c
 ./concurrent_access_fcntl A &
 ./concurrent_access_fcntl B &
