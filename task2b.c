@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define DATA_FILE "datafile"
+#define DATA_FILE "test.txt"
 
 void write_to_file(const char *message) {
     FILE *file = fopen(DATA_FILE, "w");
@@ -49,7 +49,6 @@ void lock_and_process(const char *message) {
 
     write_to_file(message);
     read_from_file();
-    ftruncate(fd, 0);  // Clear the file
 
     lock.l_type = F_UNLCK;
     fcntl(fd, F_SETLK, &lock);
